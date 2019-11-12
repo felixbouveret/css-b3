@@ -1,0 +1,61 @@
+/* .inner {
+  max-width: 1220px;
+  width: 95%;
+  margin: auto;;
+} */
+.float .first-image {
+  float: left;
+}
+.float img {
+  margin-right: 1em;
+}
+
+
+.gorilla-card {
+  clear: both;
+  padding: 1em;
+  margin-top: 2em;
+  border-radius: .25em;
+  background-color: green;
+  box-shadow: 0 10px 20px #00000020;
+}
+.gorilla-card .first-image {
+  float: left;
+  margin-right: 1em;
+}
+.gorilla-card .link {
+  position: relative;
+  height: 40px;
+}
+.gorilla-card .link a {
+  position: absolute;
+  right: 0;
+  display: block;
+  padding: .5em;
+  background-color: red;
+}
+
+header {
+  background-color: red;
+}
+footer {
+  background-color: green;
+}
+article {
+  min-height: 120px;
+}
+
+.hero {
+  text-align: center;
+  background: pink url('/css/images/lg-gorilla11.jpg') center / cover no-repeat;
+  min-height: 700px;
+  position: relative;
+}
+
+.hero-content {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
