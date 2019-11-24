@@ -1,8 +1,4 @@
-/* .inner {
-  max-width: 1220px;
-  width: 95%;
-  margin: auto;;
-} */
+
 .float .first-image {
   float: left;
 }
@@ -35,12 +31,7 @@
   background-color: red;
 }
 
-header {
-  background-color: red;
-}
-footer {
-  background-color: green;
-}
+
 article {
   min-height: 120px;
 }
@@ -50,6 +41,11 @@ article {
   background: pink url('/css/images/lg-gorilla11.jpg') center / cover no-repeat;
   min-height: 700px;
   position: relative;
+  filter: grayscale(100%);
+  transition: filter .3s;
+}
+.hero:hover {
+  filter: grayscale(0);
 }
 
 .hero-content {
@@ -58,4 +54,99 @@ article {
   top: 50%;
   width: 100%;
   text-align: center;
+  color: #FFFFFF;
+}
+
+.column-section .column-section-container {
+  columns: 3;
+  margin-top: 32px;
+}
+.column-section-container p {
+  margin-top: 16px;
+}
+
+.flex-section .inner {
+  display: flex;
+  flex-direction: column;
+}
+.flex-section h2 {
+  align-self: baseline;
+}
+
+.flex-section .flex-section-list {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.flex-section-block {
+  background-color: black;
+  width: calc(25% - 8px);
+  min-width: 250px;
+  border: solid 1px white;
+  margin: 8px auto 0;
+}
+.flex-section-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flex-section .DS-button {
+  margin-top: 16px;
+}
+
+.DS-button {
+  position: relative;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: black;
+  border: 2px solid #000000;
+  align-self: center;
+  text-decoration: none;
+  overflow: hidden;
+}
+.DS-button-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  transition: color .3s;
+}
+.DS-button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transition: .3s;
+}
+.DS-button:hover::before {
+  width: 120%;
+  height: 120%;
+}
+.DS-button:hover .DS-button-content {
+  color: black;
+}
+
+
+.gorilla-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gorilla-list-item {
+  width: calc(25% - 8px);
+  min-width: 250px;
+  margin: 8px auto 0;
+  padding: 8px;
+  border: black solid 2px;
+}
+.gorilla-list-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  float: left;
+  margin-right: 8px;
 }

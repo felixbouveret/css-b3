@@ -1,9 +1,79 @@
-body {
-  background-color: red;
+* {
+  box-sizing: border-box;
 }
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  filter: grayscale(100%);
+  transition: filter .3s;
+}
+img:hover {
+  filter: grayscale(0);
+}
+
+.inner {
+  max-width: 1220px;
+  width: 95%;
+  margin: auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0 32px;
+  border-bottom: 2px solid black;
+}
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
+}
+
+nav ul a {
+  position: relative;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding: 8px 8px;
+  transition: color .3s;
+}
+nav ul a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: black;
+  left: 0;
+  top: 0;
+  transition: width .3s;
+  z-index: -1;
+}
+nav ul a:hover::before {
+  width: 100%;
+}
+nav ul a:hover {
+  color: white;
+}
+
+header .logo {
+  height: calc(100% - 8px);
+}
+header .logo img {
+  height: 100%;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 64px;
+}
+
+section {
+  padding: 64px 0;
 }
 
 @media (max-width: 480px) {
@@ -12,19 +82,16 @@ nav ul {
 
 @media (min-width: 481px) and (max-width: 767px) {
   body {
-    background-color: green;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   body {
-    background-color: yellow;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   body {
-    background-color: black;
   }
 
 }
