@@ -28,7 +28,6 @@
   right: 0;
   display: block;
   padding: .5em;
-  background-color: red;
 }
 
 
@@ -39,22 +38,24 @@ article {
 .hero {
   text-align: center;
   background: pink url('/css/images/lg-gorilla11.jpg') center / cover no-repeat;
-  min-height: 700px;
+  min-height: 500px;
   position: relative;
   filter: grayscale(100%);
-  transition: filter .3s;
-}
-.hero:hover {
-  filter: grayscale(0);
 }
 
 .hero-content {
   position: absolute;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   top: 50%;
+  left: 50%;
   width: 100%;
+  max-width: 600px;
   text-align: center;
   color: #FFFFFF;
+}
+
+.hero-content p {
+  margin-top: 1em;
 }
 
 .column-section .column-section-container {
@@ -104,6 +105,7 @@ article {
   border: 2px solid #000000;
   align-self: center;
   text-decoration: none;
+  color: white;
   overflow: hidden;
 }
 .DS-button-content {
@@ -127,26 +129,76 @@ article {
   width: 120%;
   height: 120%;
 }
-.DS-button:hover .DS-button-content {
+.DS-button:hover .DS-button-content, .DS-button:hover .DS-button {
   color: black;
 }
 
 
 .gorilla-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
 }
 .gorilla-list-item {
-  width: calc(25% - 8px);
-  min-width: 250px;
-  margin: 8px auto 0;
   padding: 8px;
   border: black solid 2px;
 }
 .gorilla-list-item img {
-  width: 100px;
+  width: 100%;
   height: 100px;
   object-fit: cover;
-  float: left;
   margin-right: 8px;
+}
+
+.gorilla-list-item a {
+  margin-top: 16px;
+}
+
+.dossier-top {
+  padding-top: 0;
+}
+
+.dossier-top .inner {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.dossier-top img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dossier-top-content {
+  padding: 0 5%;
+  text-align: center;
+}
+
+.dossier-top-content p {
+  margin-top: 1em;
+}
+
+.dossier-top-content a {
+  margin-top: 1em;
+}
+
+.section-content {
+  columns: 4;
+  column-gap: 32px;
+}
+
+.section-content p:not(:first-child) {
+  margin-top: 1em;
+}
+
+.strip-image {
+  height: 100px;
+  margin-bottom: 1em;
+}
+
+.strip-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

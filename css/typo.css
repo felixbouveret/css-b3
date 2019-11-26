@@ -21,6 +21,7 @@ h2::before {
   height: 2px;
   background-color: black;
   bottom: 0;
+  z-index: -1;
 }
 h3 {
   font-size: 24px;
