@@ -7,7 +7,7 @@ h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
 }
 h1 {
-  font-size: 54px;
+  font-size: 154px;
 }
 h2 {
   display: inline-block;
@@ -28,7 +28,9 @@ h3 {
 }
 
 @media (max-width: 480px) {
-
+  h1 {
+    font-size: 54px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {

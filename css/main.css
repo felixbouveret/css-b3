@@ -36,22 +36,33 @@ article {
 }
 
 .hero {
-  text-align: center;
-  background: pink url('/css/images/lg-gorilla11.jpg') center / cover no-repeat;
-  min-height: 500px;
   position: relative;
+  text-align: center;
+  background: gray url('/css/images/lg-gorilla11.jpg') center / cover no-repeat;
+  min-height: 500px;
   filter: grayscale(100%);
+}
+.home .hero {
+  display: flex;
+}
+.single .hero {
+  background-attachment: fixed;
 }
 
 .hero-content {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
   width: 100%;
   max-width: 600px;
   text-align: center;
   color: #FFFFFF;
+}
+.home .hero-content {
+  margin: auto;
+}
+.single .hero-content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
 .hero-content p {

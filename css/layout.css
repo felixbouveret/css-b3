@@ -28,9 +28,8 @@ header {
   border-bottom: 2px solid black;
 }
 
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
+nav li {
+  display: inline-block;
 }
 
 nav ul a {
@@ -71,6 +70,28 @@ footer {
   color: white;
   padding: 64px;
 }
+footer .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer img {
+  height: 130px;
+  float: left;
+  display: block;
+  margin-right: 1em;
+}
+footer a {
+  color: white;
+  margin-top: 1em;
+  display: inline-block;
+}
+footer .other-nav a {
+  color: white;
+}
+footer .other-nav a:hover {
+  text-decoration: underline;
+}
 
 section {
   padding: 64px 0;
@@ -79,14 +100,51 @@ section {
 @media (max-width: 480px) {
 
 }
+.home {
+  transition: .3s;
+}
 
 @media (min-width: 481px) and (max-width: 767px) {
-  body {
+  .home {
+    background-color: #15202B;
+    color: white;
+  }
+  .home h2::before {
+    background-color: white;
+  }
+  .home .DS-button {
+    border-color: white;
+  }
+  .home nav ul a {
+    color: white;
+  }
+  .home nav ul a:hover {
+    color: black;
+  }
+  .home nav ul a::before {
+    background-color: white;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  body {
+  .home {
+    background-color: #000000;
+    color: white;
+  }
+  .home h2::before {
+    background-color: white;
+  }
+  .home .DS-button {
+    border-color: white;
+  }
+  .home nav ul a {
+    color: white;
+  }
+  .home nav ul a:hover {
+    color: black;
+  }
+  .home nav ul a::before {
+    background-color: white;
   }
 }
 
@@ -94,12 +152,4 @@ section {
   body {
   }
 
-}
-@media (min-width: 1025px) {
-  nav ul {
-    display: block;
-  }
-  nav li {
-    display: inline-block;
-  }
 }
