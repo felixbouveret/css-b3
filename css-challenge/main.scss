@@ -1,0 +1,140 @@
+* {box-sizing: border-box;}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+p, h1, h2, h3 {
+  margin: 0;
+}
+
+body {
+  background-color: #FFF8EE;
+  padding: 1em;
+}
+
+.newspaper {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.hr-double-top, .hr-double-bottom {
+  margin: 2px 0;
+}
+
+.newspaper-topheader {
+  grid-column: 1/5;
+  border: solid #000 0;
+  border-bottom-width: 3px;
+  border-top-width: 3px;
+
+
+
+  .helper-hide {
+    display: none;
+  }
+
+  .wrapper {
+    margin: 0;
+    margin-top: -1em;
+    .newspaper-topheader-imgshield {
+      display: none;
+    }
+    .newspaper-topheader-imglogo {
+      width: 100%;
+    }
+    figcaption {
+      text-align: center;
+    }
+  }
+}
+
+.newspaper-exclusive {
+  grid-column: 1/5;
+
+  .newspaper-exclusive-box {
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    padding: .5em 0 .5em 1em ;
+    padding-left: 1em;
+    background-color: #000;
+    color: white;
+    margin: .5em 0;
+
+    &::before {
+      content: '>';
+      position: absolute;
+      left: 4px;
+    }
+  }
+
+  .newspaper-exclusive-text {
+    border: 1px solid #000;
+    padding: .2em;
+
+    .fittext-exclusive-h1 {
+      text-transform: uppercase;
+    }
+    a {
+      display: block;
+      text-align: right;
+      background-color: #000;
+      color: white;
+      margin: 0 -.2em -.2em -.2em;
+      padding-right: .2em;
+    }
+  }
+
+}
+
+.newspaper-articles {
+  grid-column: 1/5;
+  border: solid 1px #000;
+  margin-top: .5em;
+  padding: .5rem;
+
+  .fittext-toparticle-h1-1 {
+    text-transform: uppercase;
+    font-size: 8vw;
+  }
+  .newspaper-toparticle-spanwrap {
+
+    .helper-verticaltext {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 8px;
+    }
+  }
+
+  .newspaper-articles-ingress {
+    font-weight: 800;
+  }
+  p {
+    margin-top: 1em;
+  }
+
+  .newspaper-articles-anfang {
+    margin-top: 1em;
+
+    &::first-letter {
+      font-size: 3em;
+      float: left;
+      margin-bottom: -2px;
+      margin-right: .2em;
+      text-shadow: 2px 0px #ffb100;;
+    }
+  }
+
+  .newspaper-toparticle-story {
+    margin-top: 1em;
+    figure {
+      margin: 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
