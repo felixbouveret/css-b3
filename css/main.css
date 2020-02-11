@@ -38,7 +38,7 @@ article {
 .hero {
   position: relative;
   text-align: center;
-  background: gray url('/css/images/lg-gorilla11.jpg') center / cover no-repeat;
+  background: gray url('images/lg-gorilla11.jpg') center / cover no-repeat;
   min-height: 500px;
   filter: grayscale(100%);
 }
