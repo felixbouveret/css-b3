@@ -39,23 +39,43 @@ nav ul a {
   text-decoration: none;
   padding: 8px 8px;
   transition: color .3s;
+  overflow: hidden;
 }
 nav ul a::before {
   content: "";
   position: absolute;
-  width: 0;
   height: 100%;
+  width: 100%;
   background-color: black;
   left: 0;
   top: 0;
-  transition: width .3s;
   z-index: -1;
+  transform: translateX(-100%);
+  animation: linkOut .3s;
 }
 nav ul a:hover::before {
-  width: 100%;
+  transform: translateX(0);
+  animation: linkIn .3s;
 }
 nav ul a:hover {
   color: white;
+}
+
+@keyframes linkIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes linkOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
 
 header .logo {
